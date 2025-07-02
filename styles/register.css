@@ -1,0 +1,148 @@
+@media (max-width: 600px) {
+    .register-form {
+        min-height: 60vh;
+        padding: 1rem 0.2rem;
+    }
+
+    .register {
+        padding: 1rem 0.5rem;
+        max-width: 95vw;
+    }
+
+    .logo-badge .circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo {
+        width: 70%;
+    }
+}
+
+
+body {
+    background-image: url('/images/ChatGPT\ Image\ Jun\ 30\,\ 2025\,\ 05_05_18\ PM.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: auto !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center the form vertically and horizontally */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0;
+}
+
+/* Logo on top of the form */
+.logo-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: static;
+    transform: none;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #f7c844 0%, #b8860b 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid white;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Registration form styles */
+.register {
+    background: #f3f4f6;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.register h2 {
+    margin-bottom: 1rem;
+    color: #222;
+    text-align: center;
+}
+
+.register label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.register input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    transition: border 0.2s;
+}
+
+.register input:focus {
+    border-color: #f7c844;
+    outline: none;
+}
+
+.register button {
+    background: #f7c844;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+
+.register button:hover {
+    background: #b8860b;
+    color: #fff;
+}
+
+/* Hide the navbar for this page */
+.navbar {
+    display: none !important;
+}
+
+
+a {
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: #b8860b;
+    text-align: center;
+    display: block;
+    font-size: 0.95rem;
+}
+
+div.register-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
