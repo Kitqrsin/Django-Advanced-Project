@@ -31,7 +31,6 @@ body {
     flex-direction: column;
 }
 
-/* Center the form vertically and horizontally */
 .register-form {
     display: flex;
     flex-direction: column;
@@ -41,7 +40,6 @@ body {
     margin: 0;
 }
 
-/* Logo on top of the form */
 .logo-badge {
     display: flex;
     justify-content: center;
@@ -49,6 +47,7 @@ body {
     margin-bottom: 2rem;
     position: static;
     transform: none;
+    margin-top: 2.5rem;
 }
 
 .circle {
@@ -69,7 +68,6 @@ body {
     object-fit: contain;
 }
 
-/* Registration form styles */
 .register {
     background: #f3f4f6;
     padding: 2rem 2.5rem;
@@ -80,6 +78,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.register-form {
+    padding-bottom: 2em;
 }
 
 .register h2 {
@@ -126,7 +128,6 @@ body {
     color: #fff;
 }
 
-/* Hide the navbar for this page */
 .navbar {
     display: none !important;
 }

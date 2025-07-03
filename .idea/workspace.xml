@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/chamillion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/494827577_2142763262817996_8284350876648407120_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/chamillion-transparent-v2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/chamillion-transparent.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/chamillion_logo_first_no_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/chamillion_logo_second_no_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/home_page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/register-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2zJJLR3PLGOKkFfBPmq8QPefcWn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,15 +41,17 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript Debug.base.html (1).executor": "Run",
     "JavaScript Debug.base.html.executor": "Run",
+    "JavaScript Debug.login.html (1).executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.product-details.html.executor": "Run",
+    "JavaScript Debug.register-profile.html (1).executor": "Run",
     "JavaScript Debug.register-profile.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,11 +66,11 @@
       <recent name="C:\Users\Kris\Desktop\chamillion\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.product-details.html">
+  <component name="RunManager" selected="JavaScript Debug.login.html (1)">
     <configuration name="base.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/base.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="base.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/base.html" useBuiltInWebServerPort="true">
+    <configuration name="login.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/login.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/login.html" useBuiltInWebServerPort="true">
@@ -92,7 +79,7 @@
     <configuration name="product-details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/product-details.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="register-profile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/register-profile.html" useBuiltInWebServerPort="true">
+    <configuration name="register-profile.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/register-profile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="chamillion" type="Python.DjangoServer" factoryName="Django server">
@@ -121,11 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.login.html (1)" />
+        <item itemvalue="JavaScript Debug.register-profile.html (1)" />
         <item itemvalue="JavaScript Debug.product-details.html" />
         <item itemvalue="JavaScript Debug.base.html (1)" />
         <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="JavaScript Debug.register-profile.html" />
-        <item itemvalue="JavaScript Debug.base.html" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +132,8 @@
       <option name="presentableId" value="Default" />
       <updated>1751443185453</updated>
       <workItem from="1751443186507" duration="3956000" />
+      <workItem from="1751448840242" duration="1248000" />
+      <workItem from="1751562796200" duration="3011000" />
     </task>
     <servers />
   </component>

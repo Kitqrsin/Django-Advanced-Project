@@ -1,4 +1,4 @@
-gi<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -12,24 +12,38 @@ gi<!DOCTYPE html>
 
 
   <header>
-    <nav class="navbar">
-      <ul class="nav-left">
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Children</a></li>
-      </ul>
-      <div class="logo-badge">
-        <div class="circle">
-          <img src="../images/chamillion-transparent-v2.png" alt="Chamillion Logo" class="logo" />
-        </div>
-      </div>
-      <ul class="nav-right">
-        <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
-        <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
-        <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav class="navbar">
+            <ul class="nav-left">
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Children</a></li>
+            </ul>
+            <div class="logo-badge">
+                <a href="#">
+                    <div class="circle">
+                        <img src="../images/chamillion-transparent-v2.png" alt="Chamillion Logo" class="logo"/>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-right">
+                <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li>
+                    <button class="open-search-btn" onclick="toggleSearchBar()">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </li>
+            </ul>
+
+            <form id="searchForm" class="search-bar-container" onsubmit="handleSearch(event)">
+                <input type="text" placeholder="Search..." name="query">
+                <button type="submit" class="search-btn">Search</button>
+                <button type="button" class="close-btn" onclick="toggleSearchBar()">×</button>
+            </form>
+
+
+        </nav>
+    </header>
 
   <main>
     <section class="product-details">
