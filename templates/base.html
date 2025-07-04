@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Chamillion - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../styles/styles.css"/>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 <body class="no-scroll home-page">
 
-    <!-- Background animation container -->
-    <div id="background-animation"></div>
 
     <!-- Navigation bar start -->
     <header class="fade-in">
@@ -25,7 +25,7 @@
             <div class="logo-badge">
                 <a href="#">
                     <div class="circle">
-                        <img src="../images/chamillion-transparent-v2.png" alt="Chamillion Logo" class="logo"/>
+                        <img src="{% static 'images/chamillion-transparent-v2.png' %}" alt="Chamillion Logo" class="logo"/>
                     </div>
                 </a>
             </div>
@@ -50,33 +50,9 @@
     </header>
     <!-- Navigation bar end -->
 
-    <!-- Main Content start -->
-    <main class="fade-in">
-        <section class="categories">
-            <div class="category-grid">
-                <div class="category-card">
-                    <img src="https://shop.edilmac.bg/wp-content/uploads/2019/09/tshirt.jpg" alt="T-Shirts"/>
-                    <h3>T-Shirts</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://hourscollection.com/cdn/shop/files/DropShoulderHoodie-Grey-productphoto_1_800x.png?v=1739305890"
-                         alt="Hoodies"/>
-                    <h3>Hoodies</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://cdn11.bigcommerce.com/s-jjm7kgkrrc/images/stencil/1280x1280/products/59716/7057134/20321__56131.1735850961.jpg?c=1"
-                         alt="Bottoms"/>
-                    <h3>Bottoms</h3>
-                </div>
-                <div class="category-card">
-                    <img src="https://timeland.bg/media/catalog/product/cache/75f8037529a6cfaf0621434105e49151/2/1/2174ygo_damska_zlatna_grivna_blush.jpg"
-                         alt="Accessories"/>
-                    <h3>Accessories</h3>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Main Content end -->
+    {% block content %}
+    {% endblock %}
+
 
     <!-- Footer start -->
     <footer class="fade-in">
@@ -84,6 +60,6 @@
     </footer>
     <!-- Footer end -->
 
-<script src="../styles/script.js"></script>
+<script src="{% static 'styles/script.js' %}"></script>
 </body>
 </html>

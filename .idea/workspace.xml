@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/styles/profiles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamillion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/494827577_2142763262817996_8284350876648407120_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/494827577_2142763262817996_8284350876648407120_n.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chamillion-transparent-v2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/chamillion-transparent-v2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chamillion-transparent.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chamillion_logo_first_no_background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/chamillion_logo_second_no_background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/home_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register-profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -39,11 +56,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.chamillion.executor": "Run",
     "JavaScript Debug.base.html (1).executor": "Run",
     "JavaScript Debug.base.html.executor": "Run",
+    "JavaScript Debug.home_page.html.executor": "Run",
     "JavaScript Debug.login.html (1).executor": "Run",
     "JavaScript Debug.login.html.executor": "Run",
     "JavaScript Debug.product-details.html.executor": "Run",
+    "JavaScript Debug.profile-details.html.executor": "Run",
     "JavaScript Debug.register-profile.html (1).executor": "Run",
     "JavaScript Debug.register-profile.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -52,31 +72,38 @@
     "RunOnceActivity.git.unshallow": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kris\Desktop\chamillion\static" />
       <recent name="C:\Users\Kris\Desktop\chamillion\styles" />
       <recent name="C:\Users\Kris\Desktop\chamillion\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.login.html (1)">
-    <configuration name="base.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/base.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="login.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/login.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/login.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Django Server.chamillion">
+    <configuration name="home_page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/home_page.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="product-details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/product-details.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="profile-details.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/profile-details.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="profile-edit.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/profile-edit.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="register-profile.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/register-profile.html" useBuiltInWebServerPort="true">
@@ -89,6 +116,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="chamillion.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -108,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.login.html (1)" />
-        <item itemvalue="JavaScript Debug.register-profile.html (1)" />
+        <item itemvalue="JavaScript Debug.profile-details.html" />
         <item itemvalue="JavaScript Debug.product-details.html" />
-        <item itemvalue="JavaScript Debug.base.html (1)" />
-        <item itemvalue="JavaScript Debug.login.html" />
+        <item itemvalue="JavaScript Debug.home_page.html" />
+        <item itemvalue="JavaScript Debug.profile-edit.html" />
+        <item itemvalue="JavaScript Debug.register-profile.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +161,9 @@
       <updated>1751443185453</updated>
       <workItem from="1751443186507" duration="3956000" />
       <workItem from="1751448840242" duration="1248000" />
-      <workItem from="1751562796200" duration="3011000" />
+      <workItem from="1751562796200" duration="3814000" />
+      <workItem from="1751611246292" duration="1245000" />
+      <workItem from="1751617304542" duration="393000" />
     </task>
     <servers />
   </component>
