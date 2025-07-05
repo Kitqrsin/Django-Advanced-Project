@@ -1,3 +1,4 @@
+
 @media (max-width: 600px) {
     .register-form {
         min-height: 60vh;
@@ -19,9 +20,8 @@
     }
 }
 
-
 body {
-    background-image: url('/static/images/ChatGPT\ Image\ Jun\ 30\,\ 2025\,\ 05_05_18\ PM.png');
+    background-image: url('/static/images/chatgpt_image_2025_06_30_170518.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -38,6 +38,7 @@ body {
     align-items: center;
     min-height: 80vh;
     margin: 0;
+    padding-bottom: 2em;
 }
 
 .logo-badge {
@@ -47,7 +48,6 @@ body {
     margin-bottom: 2rem;
     position: static;
     transform: none;
-    margin-top: 2.5rem;
 }
 
 .circle {
@@ -80,23 +80,24 @@ body {
     gap: 1rem;
 }
 
-.register-form {
-    padding-bottom: 2em;
+.register > div {
+    display: flex;
+    flex-direction: column;
 }
 
-.register h2 {
-    margin-bottom: 1rem;
+.register > h2 {
+    margin-bottom: 3rem;
     color: #222;
     text-align: center;
 }
 
-.register label {
+.register > div > label {
     font-weight: 600;
     margin-bottom: 0.25rem;
     color: #333;
 }
 
-.register input {
+.register > div > input {
     padding: 0.6rem 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -132,7 +133,6 @@ body {
     display: none !important;
 }
 
-
 a {
     font-weight: bolder;
     margin-bottom: 1rem;
@@ -147,3 +147,4 @@ div.register-link {
     margin-top: 1rem;
     font-size: 0.95rem;
 }
+

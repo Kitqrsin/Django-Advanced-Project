@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/orders/choices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/choices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reviews/choices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/checkout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/review.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36/storage_v2/_src_/database/chamillion-db.G81weA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36/storage_v2/_src_/database/chamillion-db.G81weA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamillion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamillion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register-profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +71,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
@@ -85,6 +92,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kris\Desktop\chamillion\templates\registration" />
       <recent name="C:\Users\Kris\Desktop\chamillion\static" />
       <recent name="C:\Users\Kris\Desktop\chamillion\styles" />
       <recent name="C:\Users\Kris\Desktop\chamillion\templates" />
@@ -161,7 +169,8 @@
       <workItem from="1751562796200" duration="3814000" />
       <workItem from="1751611246292" duration="1245000" />
       <workItem from="1751617304542" duration="2832000" />
-      <workItem from="1751706353023" duration="5771000" />
+      <workItem from="1751706353023" duration="6492000" />
+      <workItem from="1751726838324" duration="4832000" />
     </task>
     <servers />
   </component>

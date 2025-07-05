@@ -16,18 +16,14 @@
             </div>
             <form action="" class="register">
                 <h2>Login to Your Account</h2>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                {{ form }}
 
                 <a href="#">Forgot password?</a>
 
                 <button type="submit">Login</button>
                 <div class="register-link">
                     Don't have an account?
-                    <a href="register-profile.html">Sign up</a>
+                    <a href="{% url 'register-user' %}">Register</a>
                 </div>
             </form>
         </section>

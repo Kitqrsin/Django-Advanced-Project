@@ -11,7 +11,7 @@ class ReviewModel(models.Model):
     )
 
     account = models.ForeignKey(
-        'accounts.AccountModel',
+        'accounts.ChamillionUser',
         on_delete=models.CASCADE,
         related_name = 'account_reviews'
     )

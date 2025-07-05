@@ -3,7 +3,7 @@ from django.db import models
 
 class CartModel(models.Model):
     account = models.OneToOneField(
-        'accounts.AccountModel',
+        'accounts.ChamillionUser',
         on_delete=models.CASCADE,
         related_name='cart'
     )
