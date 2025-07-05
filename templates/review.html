@@ -1,10 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'styles/review.css' %}">
+{% endblock %}
+
+{% block content %}
+	<div class="review-container">
+    <div class="product-image">
+      <img src="https://shop.edilmac.bg/wp-content/uploads/2019/09/tshirt.jpg" alt="Chamillion Tee">
+    </div>
+
+    <h2>Review for: Chamillion Tee</h2>
+
+    <form method="POST" action="/submit-review/">
+      <!-- {% csrf_token %} if using Django -->
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">-- Select --</option>
+        <option value="5">★★★★★ - Excellent</option>
+        <option value="4">★★★★☆ - Good</option>
+        <option value="3">★★★☆☆ - Average</option>
+        <option value="2">★★☆☆☆ - Poor</option>
+        <option value="1">★☆☆☆☆ - Terrible</option>
+      </select>
+
+      <label for="review">Your Review</label>
+      <textarea id="review" name="review" placeholder="Write your review here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+  </div>
+{% endblock %}

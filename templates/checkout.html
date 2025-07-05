@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'styles/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="checkout-container">
+        <h2>Billing Details</h2>
+        <form>
+            <label>Full Name</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Address</label>
+            <input type="text" required>
+
+            <label>City</label>
+            <input type="text" required>
+
+            <label>Payment Method</label>
+            <select>
+                <option>Credit Card</option>
+                <option>PayPal</option>
+            </select>
+
+            <button class="pay-btn" type="submit" onclick="location.href='order_summary.html'; return false;">Place
+                Order
+            </button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chamillion</title>
-  <link rel="stylesheet" href="../static/styles/styles.css" />
-  <link rel="stylesheet" href="../static/styles/register.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+{% endblock %}
+
+{% block content %}
 
 
 </head>
@@ -15,7 +13,7 @@
     <section class="register-form">
       <div class="logo-badge">
         <div class="circle">
-          <img src="../static/images/chamillion-transparent-v2.png" alt="Chamillion Logo" class="logo" />
+          <img src="{% static 'images/chamillion-transparent-v2.png' %}" alt="Chamillion Logo" class="logo" />
         </div>
       </div>
       <form action="" class="register">
@@ -43,10 +41,5 @@
         </div>
       </form>
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Chamillion. All rights reserved.</p>
-  </footer>
-  <script src="../static/styles/script.js"></script>
-</body>
-</html>
+
+{% endblock %}

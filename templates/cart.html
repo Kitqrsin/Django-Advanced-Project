@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'styles/cart.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="cart-container">
+        <div class="cart-item">
+            <img src="https://shop.edilmac.bg/wp-content/uploads/2019/09/tshirt.jpg" alt="T-Shirt">
+            <div class="cart-item-details">
+                <div class="cart-item-title">Chamillion Tee</div>
+                <div>$25.00</div>
+            </div>
+            <div>Qty: 1</div>
+        </div>
+
+        <div class="cart-total">Total: $25.00</div>
+        <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+{% endblock %}

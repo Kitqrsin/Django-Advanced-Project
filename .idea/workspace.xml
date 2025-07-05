@@ -5,28 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/styles/profiles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile-edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orders/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reviews/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/styles/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/styles/checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/styles/review.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamillion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/494827577_2142763262817996_8284350876648407120_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/494827577_2142763262817996_8284350876648407120_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/chamillion-transparent-v2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/chamillion-transparent-v2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/chamillion-transparent.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/chamillion_logo_first_no_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/chamillion_logo_second_no_background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register-profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -70,6 +65,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
     "list.type.of.created.stylesheet": "CSS",
@@ -78,6 +74,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -163,7 +160,8 @@
       <workItem from="1751448840242" duration="1248000" />
       <workItem from="1751562796200" duration="3814000" />
       <workItem from="1751611246292" duration="1245000" />
-      <workItem from="1751617304542" duration="393000" />
+      <workItem from="1751617304542" duration="2832000" />
+      <workItem from="1751706353023" duration="5771000" />
     </task>
     <servers />
   </component>

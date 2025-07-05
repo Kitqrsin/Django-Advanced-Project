@@ -28,10 +28,17 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-PROJECT_APPS = [
 
-]
 # Application definition
+
+PROJECT_APPS = [
+    "common",
+    "accounts",
+    "products",
+    "reviews",
+    "orders",
+    'cart'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
