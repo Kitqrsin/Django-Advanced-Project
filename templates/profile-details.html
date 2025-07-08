@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="profile-container">
-        <div class="profile-card">
-            <div class="profile-avatar">
-                <img src="{{ user.profile.avatar.url|default:'/static/images/default-avatar.png' }}" alt="Avatar">
+    <main>
+        <div class="profile-container">
+            <div class="profile-card">
+                <h2 class="profile-username">{{ user_profile.username }}</h2>
+                <p class="profile-email">Email: {{ user_profile.email }}</p>
+                <p class="profile-email">First name: {{ user_profile.first_name }}</p>
+                <p class="profile-email">Last name: {{ user_profile.last_name }}</p>
+                <p>Phone Number: {{ user_profile.phone_number }}</p>
+                <a href="{% url 'edit-user' user_profile.id %}" class="profile-edit-btn">Edit Profile</a>
+
+                <a href="{% url 'logout-user' %}"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="profile-edit-btn">
+                    <span>Logout</span>
+                </a>
             </div>
-            <h2 class="profile-username">{{ user.username }}</h2>
-            <p class="profile-email">{{ user.email }}</p>
-            <a href="{% url 'profile-edit' %}" class="profile-edit-btn">Edit Profile</a>
         </div>
-    </div>
+    </main>
+
+    <form id="logout-form" action="{% url 'logout-user' %}" method="post" style="display: none">
+        {% csrf_token %}
+    </form>
 {% endblock %}

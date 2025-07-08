@@ -15,51 +15,56 @@
 <body class="no-scroll home-page">
 
 
-    <!-- Navigation bar start -->
-    <header class="fade-in">
-        <nav class="navbar">
-            <ul class="nav-left">
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Children</a></li>
-            </ul>
-            <div class="logo-badge">
-                <a href="#">
-                    <div class="circle">
-                        <img src="{% static 'images/chamillion-transparent-v2.png' %}" alt="Chamillion Logo" class="logo"/>
-                    </div>
-                </a>
-            </div>
-            <ul class="nav-right">
-                <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
-                <li>
-                    <button class="open-search-btn" onclick="toggleSearchBar()">
-                        <i class="fas fa-search"></i> Search
-                    </button>
-                </li>
-            </ul>
+<!-- Navigation bar start -->
+<header class="fade-in">
+    <nav class="navbar">
+        <ul class="nav-left">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Children</a></li>
+        </ul>
+        <div class="logo-badge">
+            <a href="{% url 'home-page' %}">
+                <div class="circle">
+                    <img src="{% static 'images/chamillion-transparent-v2.png' %}" alt="Chamillion Logo" class="logo"/>
+                </div>
+            </a>
+        </div>
+        <ul class="nav-right">
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'user-details' user.id %}"><i class="fas fa-user"></i> Account</a></li>
+            {% else %}
+                <li><a href="{% url 'login-user' %}"><i class="fas fa-user"></i> Login</a></li>
+            {% endif %}
 
-            <form id="searchForm" class="search-bar-container" onsubmit="handleSearch(event)">
-                <input type="text" placeholder="Search..." name="query">
-                <button type="submit" class="search-btn">Search</button>
-                <button type="button" class="close-btn" onclick="toggleSearchBar()">×</button>
-            </form>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <li>
+                <button class="open-search-btn" onclick="toggleSearchBar()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </li>
+        </ul>
 
-
-        </nav>
-    </header>
-    <!-- Navigation bar end -->
-
-    {% block content %}
-    {% endblock %}
+        <form id="searchForm" class="search-bar-container" onsubmit="handleSearch(event)">
+            <input type="text" placeholder="Search..." name="query">
+            <button type="submit" class="search-btn">Search</button>
+            <button type="button" class="close-btn" onclick="toggleSearchBar()">×</button>
+        </form>
 
 
-    <!-- Footer start -->
-    <footer class="fade-in">
-        <p>&copy; 2025 Chamillion. All rights reserved.</p>
-    </footer>
-    <!-- Footer end -->
+    </nav>
+</header>
+<!-- Navigation bar end -->
+
+{% block content %}
+{% endblock %}
+
+
+<!-- Footer start -->
+<footer class="fade-in">
+    <p>&copy; 2025 Chamillion. All rights reserved.</p>
+</footer>
+<!-- Footer end -->
 
 <script src="{% static 'styles/script.js' %}"></script>
 </body>

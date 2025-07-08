@@ -2,20 +2,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const animationDiv = document.getElementById("background-animation");
     const fadeInElements = document.querySelectorAll(".fade-in");
 
-    // Ensure the background animation runs
-    animationDiv.style.animation = "zoomOutBlur 1s ease forwards";
+    const hasVisited = localStorage.getItem("homeVisited");
 
-    // Wait for the background animation to complete 
-    setTimeout(() => {
-        // Hide the animation div after the animation completes
-        animationDiv.classList.add("hidden");
-        document.body.classList.remove("no-scroll"); // Allow scrolling
+    if (animationDiv && !hasVisited) {
+        animationDiv.style.animation = "zoomOutBlur 1s ease forwards";
+        setTimeout(() => {
+            animationDiv.classList.add("hidden");
+            document.body.classList.remove("no-scroll");
+            fadeInElements.forEach((element) => {
+                element.classList.add("visible");
+            });
 
-        // Add the 'visible' class to all fade-in elements
+            localStorage.setItem("homeVisited", "true");
+        }, 925);
+    } else {
+
         fadeInElements.forEach((element) => {
             element.classList.add("visible");
         });
-    }, 925);
+        if (animationDiv) {
+            animationDiv.classList.add("hidden");
+        }
+        document.body.classList.remove("no-scroll");
+    }
 });
 
 function toggleSearchBar() {
@@ -26,6 +35,6 @@ function toggleSearchBar() {
 function handleSearch(event) {
     event.preventDefault();
     const query = document.querySelector('.search-bar-container input[name="query"]').value;
-    // Implement your search logic here (e.g., redirect or fetch results)
-    alert('Searching for: ' + query);
+    window.location.href = `/search_query/?query=${encodeURIComponent(query)}`;
+
 }

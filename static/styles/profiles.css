@@ -79,3 +79,18 @@
     border-radius: 0.5rem;
     font-size: 1rem;
 }
+
+input[type="tel"] {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="tel"][aria-invalid="true"] {
+    border-color: #b94a48;
+    background: #f8d7da;
+}

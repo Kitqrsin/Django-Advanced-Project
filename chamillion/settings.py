@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,6 +32,11 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+AUTHENTICATION_BACKENDS = [
+    'accounts.authenticate.EmailBackend',
+    'django.contrib.auth.backends.ModelBackend'
+]
+
 
 PROJECT_APPS = [
     "common",
@@ -47,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'phonenumber_field'
 ] + PROJECT_APPS
 
 MIDDLEWARE = [
@@ -142,3 +150,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.ChamillionUser'
+LOGIN_REDIRECT_URL = reverse_lazy('home-page')
+LOGOUT_REDIRECT_URL = reverse_lazy('home-page')
+
+PHONENUMBER_DEFAULT_REGION = 'BG'

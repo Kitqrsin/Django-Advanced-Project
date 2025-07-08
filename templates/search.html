@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'styles/search.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <section class="categories">
+            <div class="category-grid">
+                {% if products %}
+                    <h2 class="search-title">Search Results for "{{ query }}"</h2>
+
+                    {% for product in products %}
+                        <div class="category-grid">
+                            <img src="{{ product.product_image }}" alt="">
+                            <h3>{{ product.product_name }}</h3>
+                        </div>
+                    {% endfor %}
+
+                {% else %}
+                    <h2 class="search-title">No products found for "{{ query }}".</h2>
+                {% endif %}
+            </div>
+
+        </section>
+    </main>
+
+{% endblock %}
