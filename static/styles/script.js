@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         document.body.classList.remove("no-scroll");
     }
+
 });
 
 function toggleSearchBar() {
@@ -38,3 +39,4 @@ function handleSearch(event) {
     window.location.href = `/search_query/?query=${encodeURIComponent(query)}`;
 
 }
+

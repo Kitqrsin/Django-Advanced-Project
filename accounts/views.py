@@ -9,7 +9,7 @@ from accounts.forms import ChamillionUserCreationForm, ChamillionUserEditForm
 class RegisterView(CreateView):
     form_class = ChamillionUserCreationForm
     template_name = 'registration/register-profile.html'
-    success_url = reverse_lazy('home-page')
+    success_url = reverse_lazy('login-user')
 
 class AccountDetailsView(DetailView):
     template_name = 'profile-details.html'

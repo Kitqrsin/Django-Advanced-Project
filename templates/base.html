@@ -37,7 +37,8 @@
                 <li><a href="{% url 'login-user' %}"><i class="fas fa-user"></i> Login</a></li>
             {% endif %}
 
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart fa-fw fa-lg"></i> Cart</a></li>
+
             <li>
                 <button class="open-search-btn" onclick="toggleSearchBar()">
                     <i class="fas fa-search"></i> Search

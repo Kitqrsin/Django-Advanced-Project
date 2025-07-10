@@ -126,7 +126,6 @@ body.home-page {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
 }
 
 
@@ -244,7 +243,8 @@ body::before {
 }
 
 .product-image img {
-    width: 320px;
+    width: 300px;
+    height: 250px;
     max-width: 100%;
     border-radius: 1rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);

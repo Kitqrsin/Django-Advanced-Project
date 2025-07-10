@@ -21,16 +21,27 @@
 }
 
 .cart-item-details {
+  color: #fff;
   flex: 1;
   margin-left: 1rem;
 }
 
 .cart-item-title {
+  color: #fff;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
 .cart-total {
+  color: #fff;
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.cart-item-quantity{
+  color: #fff;
   text-align: right;
   font-size: 1.3rem;
   font-weight: 600;
@@ -46,7 +57,6 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background 0.3s;
-  float: right;
   margin-top: 1rem;
 }
 

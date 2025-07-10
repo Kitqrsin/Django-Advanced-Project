@@ -21,6 +21,12 @@ class ProductModel(models.Model):
         ]
     )
 
+    unit_price = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00,
+    )
+
     available = models.BooleanField(
         default=True,
     )

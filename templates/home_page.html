@@ -8,10 +8,13 @@
         <section class="categories">
             <div class="category-grid">
                 {% for product in products %}
-                    <div class="category-grid">
-                        <img src="{{ product.product_image }}" alt="">
-                        <h3>{{ product.product_name }}</h3>
-                    </div>
+                    <a href="{% url 'product-details' product.id %}">
+                        <div class="category-card">
+                            <img src="{{ product.product_image.url }}" alt="">
+                            <h3>{{ product.product_name }}</h3>
+                        </div>
+                    </a>
+
                 {% endfor %}
             </div>
         </section>

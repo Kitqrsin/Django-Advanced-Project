@@ -8,15 +8,17 @@
 {% block content %}
     <main>
         <section class="categories">
+            <h2 class="search-title">Search Results for "{{ query }}":</h2>
+
             <div class="category-grid">
                 {% if products %}
-                    <h2 class="search-title">Search Results for "{{ query }}"</h2>
-
                     {% for product in products %}
-                        <div class="category-grid">
-                            <img src="{{ product.product_image }}" alt="">
-                            <h3>{{ product.product_name }}</h3>
-                        </div>
+                        <a href="{% url 'product-details' product.id %}">
+                            <div class="category-card">
+                                <img src="{{ product.product_image.url }}" alt="">
+                                <h3>{{ product.product_name }}</h3>
+                            </div>
+                        </a>
                     {% endfor %}
 
                 {% else %}

@@ -154,3 +154,6 @@ LOGIN_REDIRECT_URL = reverse_lazy('home-page')
 LOGOUT_REDIRECT_URL = reverse_lazy('home-page')
 
 PHONENUMBER_DEFAULT_REGION = 'BG'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media_files'

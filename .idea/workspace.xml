@@ -5,26 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/styles/reviews.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/authenticate.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/authenticate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamillion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamillion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/profiles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/profiles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/review.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/create_review.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/review.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,13 +39,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -53,42 +63,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.chamillion.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.base.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.base.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.product-details.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.profile-details.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.register-profile.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.register-profile.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.chamillion.executor": "Run",
+    "JavaScript Debug.base.html (1).executor": "Run",
+    "JavaScript Debug.base.html.executor": "Run",
+    "JavaScript Debug.home_page.html.executor": "Run",
+    "JavaScript Debug.login.html (1).executor": "Run",
+    "JavaScript Debug.login.html.executor": "Run",
+    "JavaScript Debug.product-details.html.executor": "Run",
+    "JavaScript Debug.profile-details.html.executor": "Run",
+    "JavaScript Debug.register-profile.html (1).executor": "Run",
+    "JavaScript Debug.register-profile.html.executor": "Run",
+    "JavaScript Debug.review.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kris\Desktop\chamillion\templates\registration" />
@@ -97,7 +108,7 @@
       <recent name="C:\Users\Kris\Desktop\chamillion\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.chamillion">
+  <component name="RunManager" selected="JavaScript Debug.review.html">
     <configuration name="home_page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/home_page.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -110,7 +121,7 @@
     <configuration name="profile-edit.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/profile-edit.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="register-profile.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/register-profile.html" useBuiltInWebServerPort="true">
+    <configuration name="review.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/manage.py/templates/review.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="chamillion" type="Python.DjangoServer" factoryName="Django server">
@@ -140,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.review.html" />
         <item itemvalue="JavaScript Debug.profile-details.html" />
         <item itemvalue="JavaScript Debug.product-details.html" />
         <item itemvalue="JavaScript Debug.home_page.html" />
         <item itemvalue="JavaScript Debug.profile-edit.html" />
-        <item itemvalue="JavaScript Debug.register-profile.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +182,8 @@
       <workItem from="1751706353023" duration="6492000" />
       <workItem from="1751726838324" duration="6290000" />
       <workItem from="1751967005002" duration="14820000" />
+      <workItem from="1752003960447" duration="97000" />
+      <workItem from="1752161026721" duration="8520000" />
     </task>
     <servers />
   </component>

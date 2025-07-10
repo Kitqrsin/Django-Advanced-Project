@@ -21,7 +21,7 @@
 }
 
 body {
-    background-image: url('/static/images/chatgpt_image_2025_06_30_170518.png');
+    background-image: url('/static/images/ChatGPT Image Jun 30, 2025, 05_05_18 PM.png') !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -29,6 +29,10 @@ body {
     overflow: auto !important;
     display: flex;
     flex-direction: column;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .register-form {
@@ -148,3 +152,13 @@ div.register-link {
     font-size: 0.95rem;
 }
 
+
+/*.register input:invalid {*/
+/*    border-color: #e53e3e;*/
+/*    box-shadow: 0 0 0 2px rgba(229,62,62,0.15);*/
+/*}*/
+
+.register input.error {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 2px rgba(229,62,62,0.15);
+}
