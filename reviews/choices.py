@@ -10,9 +10,9 @@ class StarRatingChoices(models.TextChoices):
     ★☆☆☆☆ - Terrible
     """
 
-    EXCELLENT = '★★★★★', 'Excellent'
-    GOOD = '★★★★☆', 'Good'
-    AVERAGE = '★★★☆☆', 'Average'
-    POOR = '★★☆☆☆', 'Poor'
-    TERRIBLE = '★☆☆☆☆', 'Terrible'
-    CHOOSE_RATING = "choose your rating...", "Choose your rating..."
+    EXCELLENT = '★★★★★', 'Excellent - ★★★★★'
+    GOOD = '★★★★☆', 'Good - ★★★★☆'
+    AVERAGE = '★★★☆☆', 'Average - ★★★☆☆'
+    POOR = '★★☆☆☆', 'Poor - ★★☆☆☆'
+    TERRIBLE = '★☆☆☆☆', 'Terrible - ★☆☆☆☆'
+    CHOOSE_RATING = "", "Choose your rating..."

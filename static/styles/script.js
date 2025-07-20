@@ -40,3 +40,11 @@ function handleSearch(event) {
 
 }
 
+function showDeleteModal(deleteUrl) {
+    document.getElementById('deleteForm').action = deleteUrl;
+    document.getElementById('deleteModal').style.display = 'block';
+}
+
+function hideDeleteModal() {
+    document.getElementById('deleteModal').style.display = 'none';
+}

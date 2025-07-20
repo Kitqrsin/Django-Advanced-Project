@@ -12,7 +12,7 @@
     {% block extra_css %}
     {% endblock %}
 </head>
-<body class="no-scroll home-page">
+<body class="home-page" style="background-image: url('{% static "images/d8758b46-d341-41c8-ad05-adf2629cdb17.png" %}')  ;">
 
 
 <!-- Navigation bar start -->
@@ -68,5 +68,8 @@
 <!-- Footer end -->
 
 <script src="{% static 'styles/script.js' %}"></script>
+
+{% block extra_js %}
+{% endblock %}
 </body>
 </html>

@@ -13,19 +13,62 @@
                 <p class="product-description">
                     {{ current_product.product_description }}
                 </p>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" max="{{ current_product.quantity }}" value="1"
+                       onfocus="this.blur();"
+                       onkeydown="return false;">
                 <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
             </div>
+            <a href="{% url 'add-review' current_product.id %}" class="add-review-btn">Add Review</a>
         </section>
+
 
         <h2 class="review-h2">Reviews</h2>
         {% for review in reviews %}
             <div class="review">
                 <strong>{{ review.account.username }}</strong>
                 <span>{{ review.star_rating }}</span>
-                <p>{{ review.comment }}</p>
+                <p class="review-p">{{ review.comment }}</p>
+                {% if request.user.username == review.account.username %}
+                    <button type="button" class="delete-btn"
+                            onclick="showDeleteModal( '{% url 'delete-review' review.id %}' )">X
+                    </button>
+                {% endif %}
+                <div id="deleteModal">
+                    <div>
+                        <p>Are you sure you want to delete your review?</p>
+                        <form id="deleteForm" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Yes</button>
+                            <button type="button" onclick="hideDeleteModal()">No</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         {% empty %}
             <p class="review-p">No reviews yet.</p>
         {% endfor %}
     </main>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        document.querySelector('.add-to-cart').addEventListener('click', function () {
+            const quantity = document.getElementById('quantity').value;
+            fetch('/cart/add-to-cart/', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `product_id={{ current_product.id }}&quantity=${quantity}`
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = '/';
+                    }
+                });
+        });
+    </script>
 {% endblock %}

@@ -38,6 +38,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-top: 2rem;
+  margin-right: 0.4rem;
 }
 
 .cart-item-quantity{
@@ -46,6 +47,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-top: 2rem;
+  margin-right: 0.4rem;
 }
 
 .checkout-btn {
@@ -58,8 +60,30 @@
   cursor: pointer;
   transition: background 0.3s;
   margin-top: 1rem;
+  margin-left: 74%;
 }
 
 .checkout-btn:hover {
   background-color: #a05d93;
+}
+
+.remove-quantity {
+  display: flex;
+  gap: 1em;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.site-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f44336;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-size: 1.1em;
 }

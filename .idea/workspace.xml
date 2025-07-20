@@ -5,32 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/reviews.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/templatetags/min_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/templatetags/multiply.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/templatetags/range_filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reviews/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reviews/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chamillion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamillion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/choices.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/create_review.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/create_review.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/review.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/create_review.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/reviews.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/reviews.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register-profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/review.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
     </list>
@@ -47,8 +41,8 @@
       <list>
         <option value="TypeScript File" />
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -83,6 +77,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "main",
     "list.type.of.created.stylesheet": "CSS",
@@ -108,7 +103,7 @@
       <recent name="C:\Users\Kris\Desktop\chamillion\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.review.html">
+  <component name="RunManager" selected="Django Server.chamillion">
     <configuration name="home_page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/chamillion/templates/home_page.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -183,7 +178,9 @@
       <workItem from="1751726838324" duration="6290000" />
       <workItem from="1751967005002" duration="14820000" />
       <workItem from="1752003960447" duration="97000" />
-      <workItem from="1752161026721" duration="8520000" />
+      <workItem from="1752161026721" duration="9335000" />
+      <workItem from="1752923941615" duration="6679000" />
+      <workItem from="1753012275131" duration="9611000" />
     </task>
     <servers />
   </component>

@@ -14,7 +14,7 @@
 }
 
 .product-image img {
-    width: 150px;
+    width: auto;
     border-radius: 0.5rem;
     border: 1px solid #333;
 }
@@ -30,6 +30,7 @@ label {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
+    color: #f7c844;
 }
 
 input[type="text"],
@@ -50,7 +51,8 @@ textarea {
 }
 
 .submit-btn {
-    margin-top: 2rem;
+    margin: 2rem auto;
+    display: block;
     background-color: #b872a9;
     color: white;
     padding: 1rem 2rem;
@@ -64,3 +66,8 @@ textarea {
 .submit-btn:hover {
     background-color: #a05d93;
 }
+
+ul > li {
+    color: #f7c844;
+}
+

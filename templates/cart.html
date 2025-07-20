@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load range_filter %}
+{% load multiply %}
+{% load min_filter %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'styles/cart.css' %}">
@@ -7,18 +10,64 @@
 
 {% block content %}
     <main>
-        <div class="cart-container">
-            <div class="cart-item">
-                <img src="https://shop.edilmac.bg/wp-content/uploads/2019/09/tshirt.jpg" alt="T-Shirt">
-                <div class="cart-item-details">
-                    <div class="cart-item-title">Chamillion Tee</div>
-                    <div>$25.00</div>
-                </div>
-                <div class="cart-item-quantity">Qty: 1</div>
-            </div>
 
-            <div class="cart-total">Total: $25.00</div>
-            <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+        <div class="cart-container">
+            {% if cart_items %}
+                {% for cart_item in cart_items %}
+                    <div class="cart-item">
+                        <img src="{{ cart_item.products.product_image.url }}" alt="">
+                        <div class="cart-item-details">
+                            <div class="cart-item-title">{{ cart_item.products.product_name }}</div>
+                            <div>{{ cart_item.products.unit_price }}</div>
+                            <div class="cart-item-quantity">Qty: {{ cart_item.quantity }}</div>
+                            <div class="cart-total">Price:
+                                ${{ cart_item.quantity|multiply:cart_item.products.unit_price }}</div>
+                        </div>
+                    </div>
+
+                    <form class="remove-quantity" method="post" action="{% url 'subtract-from-cart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_id" value="{{ cart_item.products.id }}">
+
+
+                        <label class="cart-item-title" for="subtract-qty-{{ cart_item.products.id }}">Change
+                            Quantity:</label>
+                        <select name="quantity" id="subtract-qty-{{ cart_item.products.id }}"
+                                onchange="this.form.submit()">
+                            <option value="" disabled selected>-</option>
+                            {% for i in 0|to:cart_item.quantity %}
+                                <option value="{{ i }}">{{ i }}</option>
+
+                            {% endfor %}
+
+                        </select>
+
+
+                    </form>
+
+                {% endfor %}
+
+
+                <div class="cart-total">Total: ${{ total }}</div>
+                <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+            {% else %}
+                <div class="cart-item-title" style="text-align: center;">No items in the cart!</div>
+            {% endif %}
         </div>
     </main>
+
+    <div id="custom-alert" style="display:none;" class="site-alert"></div>
+{% endblock %}
+
+{% block extra_js %}
+	<script>
+    {% if messages %}
+        let alertBox = document.getElementById('custom-alert');
+        {% for message in messages %}
+            alertBox.innerText = "{{ message|escapejs }}";
+            alertBox.style.display = "block";
+            setTimeout(() => { alertBox.style.display = "none"; }, 4000);
+        {% endfor %}
+    {% endif %}
+</script>
 {% endblock %}
