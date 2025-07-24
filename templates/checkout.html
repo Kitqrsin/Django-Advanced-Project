@@ -3,34 +3,100 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'styles/checkout.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
 {% endblock %}
 
 {% block content %}
 
     <div class="checkout-container">
         <h2>Billing Details</h2>
-        <form>
-            <label>Full Name</label>
-            <input type="text" required>
+        <h3 class="total-price">Total: {{ total_price }}</h3>
+        <form method="post">
+            {{ form }}
+            {% csrf_token %}
 
-            <label>Email</label>
-            <input type="email" required>
-
-            <label>Address</label>
-            <input type="text" required>
-
-            <label>City</label>
-            <input type="text" required>
-
-            <label>Payment Method</label>
-            <select>
-                <option>Credit Card</option>
-                <option>PayPal</option>
-            </select>
-
-            <button class="pay-btn" type="submit" onclick="location.href='order_summary.html'; return false;">Place
-                Order
-            </button>
+            <div id="econt-map" style="display: none; height: 600px; width: 100%; margin-top: 20px;"></div>
+            <button type="submit">Продължи</button>
         </form>
+
     </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mapContainer = document.getElementById("econt-map");
+            const deliveryRadios = document.querySelectorAll('input[name="delivery_method"]');
+
+            // Map initialization
+            const map = L.map('econt-map').setView([42.6977, 23.3219], 7);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap'
+            }).addTo(map);
+
+            let markers = L.markerClusterGroup();
+            map.addLayer(markers);
+
+            const officeInput = document.getElementById("id_econt_office_address");
+
+            function isValidCoord(val) {
+                return Number.isFinite(val);
+            }
+
+            function loadOffices() {
+                fetch(`api/econt-offices/`)
+                    .then(res => res.json())
+                    .then(data => {
+                        markers.clearLayers();
+                        officeInput.value = "";
+
+                        data.forEach(office => {
+                            const lat = parseFloat(office.latitude);
+                            const lng = parseFloat(office.longitude);
+                            if (isValidCoord(lat) && isValidCoord(lng)) {
+                                const marker = L.marker([lat, lng])
+                                    .bindPopup(`<strong>${office.name}</strong><br>${office.address}`)
+                                    .on("click", () => {
+                                        officeInput.value = `${office.name}, ${office.address}`;
+                                    });
+                                markers.addLayer(marker);
+                            }
+                        });
+
+                        const firstValid = data.find(office =>
+                            isValidCoord(parseFloat(office.latitude)) && isValidCoord(parseFloat(office.longitude))
+                        );
+                        if (firstValid) {
+                            map.setView([parseFloat(firstValid.latitude), parseFloat(firstValid.longitude)], 13);
+                        }
+                    });
+            }
+
+            loadOffices();
+
+            // Show/hide map based on delivery method
+            function updateMapVisibility() {
+                const selected = document.querySelector('input[name="delivery_method"]:checked');
+                if (selected && selected.value === "econt") {
+                    mapContainer.style.display = "block";
+                    map.invalidateSize();
+                } else {
+                    mapContainer.style.display = "none";
+                }
+            }
+
+            deliveryRadios.forEach(radio => {
+                radio.addEventListener("change", updateMapVisibility);
+            });
+
+            // Initial state
+            updateMapVisibility();
+        });
+    </script>
+
+
 {% endblock %}

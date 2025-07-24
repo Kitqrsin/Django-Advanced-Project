@@ -49,7 +49,7 @@
 
 
                 <div class="cart-total">Total: ${{ total }}</div>
-                <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+                <button class="checkout-btn" onclick="location.href='{% url 'checkout' %}'">Proceed to Checkout</button>
             {% else %}
                 <div class="cart-item-title" style="text-align: center;">No items in the cart!</div>
             {% endif %}
