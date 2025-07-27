@@ -22,8 +22,14 @@ class CartsProductsModel(models.Model):
         related_name='product_carts'
     )
 
+    size = models.ForeignKey(
+        'products.SizeModel',
+        on_delete=models.CASCADE,
+    )
+
     quantity = models.IntegerField(
         validators=[
             MinValueValidator(0)
         ]
     )
+

@@ -1,5 +1,4 @@
 import requests
-from PIL.SpiderImagePlugin import iforms
 from django.http import JsonResponse
 from django.urls import reverse_lazy
 from django.views.generic import FormView

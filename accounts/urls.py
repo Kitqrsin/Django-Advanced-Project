@@ -1,4 +1,4 @@
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LogoutView
 from django.urls import path, include
 
 from accounts import views
@@ -11,6 +11,7 @@ urlpatterns = [
     path('<int:id>/', include([
         path('details/', views.AccountDetailsView.as_view(), name='user-details'),
         path('edit/', views.AccountEditView.as_view(), name='edit-user'),
+        path('delete/', views.AccountDeleteView.as_view(), name='delete-user'),
     ]),
          )
 

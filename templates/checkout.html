@@ -20,7 +20,7 @@
             {% csrf_token %}
 
             <div id="econt-map" style="display: none; height: 600px; width: 100%; margin-top: 20px;"></div>
-            <button type="submit">Продължи</button>
+            <button type="submit">Buy</button>
         </form>
 
     </div>
@@ -30,8 +30,9 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const mapContainer = document.getElementById("econt-map");
+            const econt_address_field = document.getElementById('id_econt_office_address')
             const deliveryRadios = document.querySelectorAll('input[name="delivery_method"]');
-
+            const econt_address_label = document.querySelector('label[for="id_econt_office_address"]');
             // Map initialization
             const map = L.map('econt-map').setView([42.6977, 23.3219], 7);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -83,9 +84,14 @@
                 const selected = document.querySelector('input[name="delivery_method"]:checked');
                 if (selected && selected.value === "econt") {
                     mapContainer.style.display = "block";
+                    econt_address_field.style.display = "block";
+                    econt_address_label.style.display = "block";
+
                     map.invalidateSize();
                 } else {
                     mapContainer.style.display = "none";
+                    econt_address_field.style.display = "none";
+                    econt_address_label.style.display = "none";
                 }
             }
 

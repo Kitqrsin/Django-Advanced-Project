@@ -15,6 +15,22 @@
                    class="profile-edit-btn">
                     <span>Logout</span>
                 </a>
+
+                <a onclick="showDeleteModal( '{% url 'delete-user' user_profile.id %}' )"
+                class="profile-edit-btn">
+                    <span>Delete</span>
+                </a>
+
+                <div id="deleteModal">
+                    <div>
+                        <p>Are you sure you want to delete your review?</p>
+                        <form id="deleteForm" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Yes</button>
+                            <button type="button" onclick="hideDeleteModal()">No</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

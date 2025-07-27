@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load dict_filter %}
 
 {% block content %}
     <main>
@@ -13,13 +14,36 @@
                 <p class="product-description">
                     {{ current_product.product_description }}
                 </p>
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" min="1" max="{{ current_product.quantity }}" value="1"
-                       onfocus="this.blur();"
-                       onkeydown="return false;">
-                <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                <div class="size-selector">
+                    <p>Available Sizes:</p>
+                    <div class="sizes">
+                        {% for size_name in all_sizes %}
+                            {% with qty=size_data|get_item:size_name|default:0 %}
+                                <button
+                                        class="size-btn {% if qty == 0 %}disabled{% endif %}"
+                                        data-size="{{ size_name }}"
+                                        data-quantity="{{ qty }}"
+                                        {% if qty == 0 %}disabled{% endif %}
+                                        onclick="selectSize(this)">
+                                    {{ size_name }}
+                                </button>
+                            {% endwith %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <label for="quantity" class="quantity" style="display: none">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="quantity" min="1" value="1" disabled
+                       style="display: none">
+
+                <input type="hidden" name="selected_size" id="selected_size">
+                {% if current_product.is_available %}
+                    <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                {% else %}
+                    <span class="out-of-stock">Out of Stock</span>
+                {% endif %}
+                <a href="{% url 'add-review' current_product.id %}" class="add-review-btn">Add Review</a>
             </div>
-            <a href="{% url 'add-review' current_product.id %}" class="add-review-btn">Add Review</a>
         </section>
 
 
@@ -49,26 +73,69 @@
             <p class="review-p">No reviews yet.</p>
         {% endfor %}
     </main>
+
+    <div id="custom-alert" style="display:none;" class="site-alert"></div>
 {% endblock %}
 
 {% block extra_js %}
     <script>
+        let alertBox = document.getElementById('custom-alert');
         document.querySelector('.add-to-cart').addEventListener('click', function () {
-            const quantity = document.getElementById('quantity').value;
+            const params = new URLSearchParams({
+                product_id: '{{ current_product.id }}',
+                quantity: document.getElementById('quantity').value,
+                size_name: document.getElementById('selected_size').value
+            });
             fetch('/cart/add-to-cart/', {
                 method: 'POST',
                 headers: {
                     'X-CSRFToken': '{{ csrf_token }}',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `product_id={{ current_product.id }}&quantity=${quantity}`
+                body: params.toString()
             })
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
                         window.location.href = '/';
+                    } else {
+                        alertBox.innerText = data.error;
+                        alertBox.style.display = "block";
+                        setTimeout(() => {
+                            alertBox.style.display = "none";
+                        }, 4000);
                     }
                 });
         });
+
+        function selectSize(button) {
+            const allButtons = document.querySelectorAll('.size-btn');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+
+            if (button.classList.contains('disabled')) return;
+
+            button.classList.add('active');
+
+            const size = button.dataset.size;
+            const qty = parseInt(button.dataset.quantity, 10);
+
+            document.getElementById('selected_size').value = size;
+
+            const qtyInput = document.getElementById('quantity');
+            const qtyLabel = document.querySelector('label.quantity')
+            qtyInput.disabled = false;
+            qtyInput.max = qty;
+            qtyInput.value = 1;
+
+            qtyLabel.classList.add('quantity-animate');
+            qtyInput.classList.add('quantity-animate');
+
+            setTimeout(() => {
+                qtyLabel.classList.add('show');
+                qtyInput.classList.add('show');
+            }, 1);
+
+            document.getElementById('add-to-cart-btn').disabled = false;
+        }
     </script>
 {% endblock %}

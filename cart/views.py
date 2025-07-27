@@ -18,40 +18,70 @@ def get_cart(request):
 
 @require_POST
 def add_to_cart(request):
+    size_name = request.POST.get('size_name')
     product_id = request.POST.get('product_id')
     quantity = int(request.POST.get('quantity', 1))
+
     if request.user.is_authenticated:
         product = ProductModel.objects.get(id=product_id)
         cart, _ = CartModel.objects.get_or_create(account=request.user)
+        product_size = product.productsize_set.filter(size__size_name=size_name).first()
+        if not product_size:
+            return JsonResponse({'success': False, 'error': 'Invalid size'})
         cart_product, created = CartsProductsModel.objects.get_or_create(
-            carts=cart, products=product,
+            carts=cart, products=product, size=product_size.size,
             defaults={'quantity': quantity}
         )
         if not created:
+            if (cart_product.quantity + quantity) > product_size.quantity:
+                return JsonResponse({'success': False, 'error': 'Too much quantity selected (check existing in cart)'})
+
             cart_product.quantity += quantity
             cart_product.save()
         return JsonResponse({'success': True})
+
+    # if user is anonymous
     else:
         cart = get_cart(request)
-        cart[product_id] = cart.get(product_id, 0) + quantity
+        key = f"{product_id}|{size_name}"
+
+        # Validations for cart:
+        try:
+            product = ProductModel.objects.get(id=product_id)
+        except ProductModel.DoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Product not found'})
+
+        product_size = product.productsize_set.filter(size__size_name=size_name).first()
+        if not product_size:
+            return JsonResponse({'success': False, 'error': 'Invalid size'})
+
+        current_qty = cart.get(key, 0)
+        if current_qty + quantity > product_size.quantity:
+            return JsonResponse({'success': False, 'error': 'Too much quantity selected (check existing in cart)'})
+
+        cart[key] = cart.get(key, 0) + quantity
         request.session.modified = True
         return JsonResponse({'success': True})
 
 @require_POST
 def subtract_from_cart(request):
+    size_name = request.POST.get('size_name')
     product_id = request.POST.get('product_id')
     quantity = int(request.POST.get('quantity', 1))
     if request.user.is_authenticated:
         try:
             cart = CartModel.objects.get(account=request.user)
-            cart_product = CartsProductsModel.objects.get(carts=cart, products_id=product_id)
-            product_quantity_available = ProductModel.objects.get(id=product_id)
+
+            product = ProductModel.objects.get(id=product_id)
+            product_size = product.productsize_set.filter(size__size_name=size_name).first()
+            cart_product = CartsProductsModel.objects.get(carts=cart, products_id=product_id, size=product_size.size)
+            max_qty = product_size.quantity if product_size else 0
             if cart_product:
                 if quantity == 0:
                     cart_product.delete()
                 else:
-                    if quantity > product_quantity_available.quantity:
-                        messages.error(request, f'The maximum amount possible is: {product_quantity_available.quantity}')
+                    if quantity > max_qty:
+                        messages.error(request, f'The maximum amount possible is: {max_qty}')
                     else:
                         cart_product.quantity = quantity
                         cart_product.save()
@@ -61,16 +91,19 @@ def subtract_from_cart(request):
 
     else:
         cart = request.session.get('cart', {})
-        product_quantity_available = ProductModel.objects.get(id=product_id)
-        if product_id in cart:
+        key = f"{product_id}|{size_name}"
+        product = ProductModel.objects.get(id=product_id)
+        product_size = product.productsize_set.filter(size__size_name=size_name).first()
+        max_qty = product_size.quantity if product_size else 0
+        if key in cart:
             if quantity == 0:
-                del cart[product_id]
+                del cart[key]
             else:
-                if quantity > product_quantity_available.quantity:
-                    messages.error(request, f'The maximum amount possible is: {product_quantity_available.quantity}')
+                if quantity > max_qty:
+                    messages.error(request, f'The maximum amount possible is: {max_qty}')
 
                 else:
-                    cart[product_id] = quantity
+                    cart[key] = quantity
             request.session['cart'] = cart
             request.session.modified = True
 
@@ -90,13 +123,21 @@ class CartDetailsView(ListView):
                 return []
         else:
             cart = self.request.session.get('cart', {})
-            products = ProductModel.objects.filter(id__in=cart.keys())
+            # since the key for anonymous cart resembles: "3|M"
+            products = ProductModel.objects.filter(id__in=[key.split('|')[0] for key in cart.keys()])
             cart_items = []
-            for product in products:
-                cart_items.append(type('CartItem', (), {
-                    'products': product,
-                    'quantity': cart[str(product.id)],
-                })())
+
+            for key, qty in cart.items():
+                product_id, size_name = key.split("|")
+                product = next((p for p in products if str(p.id) == product_id), None)
+                if product:
+                    # Create a new class CartItem and instance of it with attributes products, size_name and quantity
+                    # then append it to the cart_items list
+                    cart_items.append(type('CartItem', (), {
+                        'products': product,
+                        'size_name': size_name,
+                        'quantity': qty,
+                    })())
             return cart_items
 
     def get_context_data(self, **kwargs):

@@ -165,8 +165,12 @@ body.home-page {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 main {
@@ -289,24 +293,132 @@ body::before {
     transition: background 0.2s;
     align-self: center;
 }
+
 .add-review-btn:hover {
     background: #6c3483;
 }
 
 .add-to-cart {
+    max-width: 50vw;
     background: #2e8b57;
     color: #fff;
     border: none;
     border-radius: 0.7rem;
-    padding: 0.9rem 2.2rem;
+    padding: 1em 4.3em;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
-    margin-top: 1.5rem;
+    margin: 1em auto;
 }
 
 .add-to-cart:hover {
     background: #256944;
 }
 
+.product-item a {
+    text-decoration: none;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+    background: #f8f8f8;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #2e8b57;
+    font-weight: 500;
+    margin: 0;
+}
+
+.product-item .fa-shopping-bag {
+    font-size: 1.4rem;
+    color: #b872a9;
+    margin-top: 0.8rem;
+}
+
+.size-btn {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border: 1px solid #b872a9;
+    background: #fff;
+    color: #b872a9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.size-btn:hover:not(.disabled) {
+    background: #b872a9;
+    color: #fff;
+}
+
+.size-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.size-btn.active {
+    background: #b872a9;
+    color: #fff;
+}
+
+.quantity-animate {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.3s, transform 0.3s;
+    display: block !important;
+}
+
+.quantity-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-width: 4vw;
+}
+
+.out-of-stock {
+    margin: 2em auto;
+    text-align: center;
+}

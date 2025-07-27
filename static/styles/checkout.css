@@ -80,6 +80,14 @@ label {
     border: 1px solid #e0e0e0;
 }
 
+label .id_econt_office_address{
+    display: none;
+}
+
+.id_econt_office_address {
+    display: none;
+}
+
 @media (max-width: 700px) {
     .checkout-container {
         padding: 18px 8px 24px 8px;

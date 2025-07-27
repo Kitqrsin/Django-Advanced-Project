@@ -18,6 +18,12 @@
                         <img src="{{ cart_item.products.product_image.url }}" alt="">
                         <div class="cart-item-details">
                             <div class="cart-item-title">{{ cart_item.products.product_name }}</div>
+                            {% if user.is_authenticated %}
+                                <div class="cart-item-title">{{ cart_item.size.size_name }}</div>
+                            {% else %}
+                                <div class="cart-item-title">Size: {{ cart_item.size_name }}</div>
+                            {% endif %}
+
                             <div>{{ cart_item.products.unit_price }}</div>
                             <div class="cart-item-quantity">Qty: {{ cart_item.quantity }}</div>
                             <div class="cart-total">Price:
@@ -28,7 +34,11 @@
                     <form class="remove-quantity" method="post" action="{% url 'subtract-from-cart' %}">
                         {% csrf_token %}
                         <input type="hidden" name="product_id" value="{{ cart_item.products.id }}">
-
+                        {% if user.is_authenticated %}
+                            <input type="hidden" name="size_name" value="{{ cart_item.size.size_name }}">
+                        {% else %}
+                            <input type="hidden" name="size_name" value="{{ cart_item.size_name }}">
+                        {% endif %}
 
                         <label class="cart-item-title" for="subtract-qty-{{ cart_item.products.id }}">Change
                             Quantity:</label>
@@ -60,14 +70,16 @@
 {% endblock %}
 
 {% block extra_js %}
-	<script>
-    {% if messages %}
-        let alertBox = document.getElementById('custom-alert');
-        {% for message in messages %}
-            alertBox.innerText = "{{ message|escapejs }}";
-            alertBox.style.display = "block";
-            setTimeout(() => { alertBox.style.display = "none"; }, 4000);
-        {% endfor %}
-    {% endif %}
-</script>
+    <script>
+        {% if messages %}
+            let alertBox = document.getElementById('custom-alert');
+            {% for message in messages %}
+                alertBox.innerText = "{{ message|escapejs }}";
+                alertBox.style.display = "block";
+                setTimeout(() => {
+                    alertBox.style.display = "none";
+                }, 4000);
+            {% endfor %}
+        {% endif %}
+    </script>
 {% endblock %}

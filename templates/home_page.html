@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load star_render %}
 
 {% block content %}
     <!-- Background animation container -->
@@ -6,17 +7,21 @@
     <!-- Main Content start -->
     <main class="fade-in">
         <section class="categories">
-            <div class="category-grid">
-                {% for product in products %}
-                    <a href="{% url 'product-details' product.id %}">
-                        <div class="category-card">
-                            <img src="{{ product.product_image.url }}" alt="">
-                            <h3>{{ product.product_name }}</h3>
-                        </div>
-                    </a>
 
+            <ul class="product-list">
+                {% for product in products %}
+                    <li class="product-item">
+                        <a href="{% url 'product-details' product.id %}">
+                            <img src="{{ product.product_image.url }}" alt="">
+                            <div class="product-info">
+                                <h3>{{ product.product_name }}</h3>
+                                <p>{{ product.unit_price }}$</p>
+                                <p>Rating: {{ product.get_average_rating|render_stars }}</p>
+                            </div>
+                        </a>
+                    </li>
                 {% endfor %}
-            </div>
+            </ul>
         </section>
     </main>
     <!-- Main Content end -->

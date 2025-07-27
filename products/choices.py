@@ -6,3 +6,12 @@ class CategoryChoices(models.TextChoices):
     WOMEN = "women", "Women"
     CHILDREN = "children", "Children"
     ACCESSORIES = "accessories",  "Accessories"
+
+
+class SizeChoices(models.TextChoices):
+    XS = 'XS', 'XS'
+    S = 'S', 'S'
+    M = 'M', 'M'
+    L = 'L', 'L'
+    XL = 'XL', 'XL'
+    XXL = 'XXL', 'XXL'
