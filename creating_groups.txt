@@ -1,0 +1,10 @@
+To create groups with permissions:
+Review Manager - can delete/edit reviews of other users
+Product Manager - can delete/add/edit products from the database
+Orders Manager - can change the status of orders - pending/shipped/paid/cancelled
+Account Manager - can delete/edit accounts of other users
+(to alter these permissions please visit accounts/management/commands/setup_groups.py)
+
+
+write this command in the terminal:
+python manage.py setup_groups

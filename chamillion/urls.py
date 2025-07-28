@@ -30,5 +30,6 @@ urlpatterns = [
     path('checkout/', include('orders.urls')),
 ]
 
+# if site is still in testing and is yet to be deployed:
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

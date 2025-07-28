@@ -5,50 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c767e59-1bf0-4550-a6a4-41153bf609fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts/mixins.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/templatetags/star_render.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/templatetags/dict_filter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/alert.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36/storage_v2/_src_/database/chamillion-db.G81weA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/497033bd-132f-4f53-be92-d39dab5c3c36/storage_v2/_src_/database/chamillion-db.G81weA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/management/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/management/commands/setup_groups.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creating_groups.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_files/products/485478549_1317487652877648_752494001706020427_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_files/products/Ianna_expanded_bright.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_files/products/Untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_files/products/original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/migrations/0002_alter_ordermodel_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/migrations/0003_alter_ordermodel_account.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/migrations/0004_remove_ordermodel_econt_office_code_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/choices.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/choices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0002_productmodel_unit_price.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reviews/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reviews/migrations/0002_alter_reviewmodel_star_rating.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/checkout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamillion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamillion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reviews/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/reviews/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,47 +44,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.chamillion.executor": "Run",
-    "JavaScript Debug.base.html (1).executor": "Run",
-    "JavaScript Debug.base.html.executor": "Run",
-    "JavaScript Debug.home_page.html (1).executor": "Run",
-    "JavaScript Debug.home_page.html.executor": "Run",
-    "JavaScript Debug.login.html (1).executor": "Run",
-    "JavaScript Debug.login.html.executor": "Run",
-    "JavaScript Debug.product-details.html.executor": "Run",
-    "JavaScript Debug.profile-details.html.executor": "Run",
-    "JavaScript Debug.register-profile.html (1).executor": "Run",
-    "JavaScript Debug.register-profile.html.executor": "Run",
-    "JavaScript Debug.review.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.views.executor": "Debug",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.chamillion.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.base.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.base.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home_page.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.home_page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.login.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.product-details.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.profile-details.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register-profile.html (1).executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.register-profile.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.review.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindow.GitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2025.1.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kris\Desktop\chamillion\templates\registration" />
@@ -231,7 +196,8 @@
       <workItem from="1753365607558" duration="12336000" />
       <workItem from="1753432494094" duration="5386000" />
       <workItem from="1753605479160" duration="15641000" />
-      <workItem from="1753639470471" duration="2222000" />
+      <workItem from="1753639470471" duration="3985000" />
+      <workItem from="1753702685237" duration="4372000" />
     </task>
     <servers />
   </component>
