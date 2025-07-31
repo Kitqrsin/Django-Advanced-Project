@@ -1,5 +1,6 @@
 Django==5.2.3
 psycopg2-binary
 phonenumbers
-django-phonenumber-field
+django-phonenumber-field~=8.1.0
 Pillow
+requests~=2.32.4
