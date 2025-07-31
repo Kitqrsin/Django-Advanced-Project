@@ -86,6 +86,7 @@ class CheckoutView(FormView):
             session_cart = self.request.session.get('cart', {})
             total_price = 0
             for product_id, quantity in session_cart.items():
+                product_id = int(product_id.split('|')[0]) # Since the key is in the format "product_id|size_name"
                 try:
                     product = ProductModel.objects.get(id=product_id)
                     total_price += product.unit_price * quantity
