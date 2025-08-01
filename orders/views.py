@@ -134,20 +134,27 @@ class CheckoutView(FormView):
             order.save()
 
             for cart_item in cart.cart_products.all():
+                product_size = cart_item.products.productsize_set.filter(
+                    size__size_name=cart_item.size.size_name
+                ).first()
                 OrderItemsModel.objects.create(
                     orders=order,
                     items=cart_item.products,
                     quantity=cart_item.quantity,
                     unit_price=cart_item.products.unit_price
                 )
+                product_size.quantity -= cart_item.quantity
+                product_size.save()
+
 
             cart.cart_products.all().delete()
 
         # for anonymous users
         else:
             cart = self.request.session.get('cart', {})
-
-            for product_id, quantity in cart.items():
+            total_price = 0
+            for product, quantity in cart.items():
+                product_id = int(product.split('|')[0])
                 product = ProductModel.objects.get(id=product_id)
                 total_price += product.unit_price * quantity
 
@@ -156,7 +163,9 @@ class CheckoutView(FormView):
             order.total_price = total_price
             order.save()
 
-            for product_id, quantity in cart.items():
+            for product, quantity in cart.items():
+                product_id = int(product.split('|')[0])
+                product_size = product.split('|')[1]
                 try:
                     product = ProductModel.objects.get(id=product_id)
                     OrderItemsModel.objects.create(
@@ -165,6 +174,10 @@ class CheckoutView(FormView):
                         quantity=quantity,
                         unit_price=product.unit_price
                     )
+
+                    product_size_object = product.productsize_set.filter(size__size_name=product_size).first()
+                    product_size_object.quantity -= quantity
+                    product_size_object.save()
                 except ProductModel.DoesNotExist:
                     continue
 
