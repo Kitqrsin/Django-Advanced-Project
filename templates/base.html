@@ -12,16 +12,24 @@
     {% block extra_css %}
     {% endblock %}
 </head>
-<body class="home-page" style="background-image: url('{% static "images/d8758b46-d341-41c8-ad05-adf2629cdb17.png" %}')  ;">
+<body class="home-page"
+      style="background-image: url('{% static "images/d8758b46-d341-41c8-ad05-adf2629cdb17.png" %}')  ;">
 
 
 <!-- Navigation bar start -->
 <header class="fade-in">
     <nav class="navbar">
         <ul class="nav-left">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Children</a></li>
+                {% for category in categories %}
+                    <li>
+                        <a href="{% url 'home-page' %}?category={{ category.id }}"
+                                {% if selected_category|add:'' == category.id|stringformat:"s" %}
+                           class="active"
+                                {% endif %}>
+                            {{ category }}
+                        </a>
+                    </li>
+                {% endfor %}
         </ul>
         <div class="logo-badge">
             <a href="{% url 'home-page' %}">
