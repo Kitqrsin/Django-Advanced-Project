@@ -22,4 +22,18 @@ class HomePage(ListView):
     template_name = 'home_page.html'
     context_object_name = 'products'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        category_id = self.request.GET.get('category')
+
+        if category_id:
+            queryset = queryset.filter(categories=category_id)
+
+        return queryset.distinct()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = CategoryModel.objects.all()
+        context['selected_category'] = self.request.GET.get('category', None)
+        return context
 
