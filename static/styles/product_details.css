@@ -1,0 +1,283 @@
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 1.5rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    box-shadow: 0 4px 24px rgba(184, 114, 169, 0.10);
+    min-height: 400px;
+}
+
+.product-image img {
+    width: 300px;
+    height: 250px;
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(184, 114, 169, 0.10);
+    background: #fff;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.product-info h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #b872a9;
+    letter-spacing: 0.02em;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #8e44ad;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.product-description {
+    color: #8e44ad;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.size-selector p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    color: #b872a9;
+}
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.size-btn {
+    padding: 0.5rem 1rem;
+    border: 1.5px solid #b872a9;
+    background: #fff;
+    color: #b872a9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.size-btn:hover:not(.disabled),
+.size-btn.active {
+    background: #b872a9;
+    color: #fff;
+}
+
+.size-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantity {
+    font-weight: 500;
+    color: #b872a9;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+input.quantity {
+    width: 70px;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid #b872a9;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    color: #444;
+}
+
+.add-to-cart {
+    max-width: 50vw;
+    background: #2e8b57;
+    color: #fff;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 1em 4.3em;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 1em auto;
+    display: block;
+}
+
+.add-to-cart:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.add-to-cart:hover:not(:disabled) {
+    background: #256944;
+}
+
+.add-review-btn {
+    display: inline-block;
+    background: #8e44ad;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.2s;
+    align-self: center;
+}
+
+.add-review-btn:hover {
+    background: #6c3483;
+}
+
+.out-of-stock {
+    margin: 2em auto 1em auto;
+    text-align: center;
+    color: #b872a9;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+}
+
+.site-alert {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #b872a9;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 12px rgba(184, 114, 169, 0.10);
+    z-index: 1000;
+    font-size: 1.1rem;
+    display: none;
+}
+
+.review-h2 {
+    text-align: center;
+    color: #b872a9;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.review {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(184, 114, 169, 0.07);
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    position: relative;
+}
+
+.review strong {
+    color: #8e44ad;
+    font-size: 1.1rem;
+}
+
+.review span {
+    color: #8e44ad;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.review-p {
+    color: #444;
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.delete-btn:hover {
+    background: #c0392b;
+}
+
+#deleteModal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+}
+
+#deleteModal > div {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 12px rgba(184, 114, 169, 0.10);
+    text-align: center;
+}
+
+#deleteModal button {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    background: #b872a9;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+#deleteModal button[type="button"]:hover {
+    background: #a05d93;
+}
+
+#deleteModal button[type="submit"] {
+    background: #2e8b57;
+}
+
+#deleteModal button[type="submit"]:hover {
+    background: #256944;
+}
+
+/* Animations for quantity input */
+.quantity-animate {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.3s, transform 0.3s;
+    display: block !important;
+}
+
+.quantity-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-width: 4vw;
+}
