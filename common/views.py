@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 
-from products.models import ProductModel
+from products.models import ProductModel, CategoryModel
 
 
 def search_result(request):
