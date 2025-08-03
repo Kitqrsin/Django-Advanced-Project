@@ -9,6 +9,7 @@ class OrderModel(models.Model):
         on_delete=models.CASCADE,
         related_name='account_orders',
         null=True,
+        blank=True,
     )
 
     total_price = models.DecimalField(
