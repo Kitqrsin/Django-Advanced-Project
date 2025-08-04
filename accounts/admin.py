@@ -8,7 +8,21 @@ UserModel = get_user_model()
 # Register your models here.
 @admin.register(UserModel)
 class UserModelAdmin(admin.ModelAdmin):
-    # Prevent non-superusers from altering/seeing superusers data
+
+    # Additional safety for non-superusers not altering superusers
+
+    def has_delete_permission(self, request, obj = None):
+        if obj and obj.is_superuser and not request.user.is_superuser:
+            return False
+        return super().has_delete_permission(request, obj)
+
+
+    def has_change_permission(self, request, obj = None):
+        if obj and obj.is_superuser and not request.user.is_superuser:
+            return False
+        return super().has_change_permission(request, obj)
+
+    # Prevent non-superusers from seeing superusers
     def get_queryset(self, request):
         qs = super().get_queryset(request)
         if not request.user.is_superuser:
@@ -16,7 +30,7 @@ class UserModelAdmin(admin.ModelAdmin):
         return qs
 
 
-    # prevent non-superusers from changing is_superuser
+    # prevent non-superusers from changing is_superuser with UI
     def get_form(
             self, request, obj=None, change=None, **kwargs
     ):
