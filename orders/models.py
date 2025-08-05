@@ -50,7 +50,7 @@ class OrderModel(models.Model):
 
     city = models.CharField(
         max_length=100,
-        default='Sofia'
+        default=''
     )
 
     country = models.CharField(
@@ -60,14 +60,10 @@ class OrderModel(models.Model):
 
     address = models.CharField(
         max_length=255,
-        blank=True,
-        null=True
     )
 
     address_number = models.CharField(
         max_length=20,
-        blank=True,
-        null=True,
     )
 
     delivery_method = models.CharField(

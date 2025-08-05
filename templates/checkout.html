@@ -33,8 +33,9 @@
             const econt_address_field = document.getElementById('id_econt_office_address')
             const deliveryRadios = document.querySelectorAll('input[name="delivery_method"]');
             const econt_address_label = document.querySelector('label[for="id_econt_office_address"]');
+
             // Map initialization
-            const map = L.map('econt-map').setView([42.6977, 23.3219], 7);
+            const map = L.map('econt-map').setView([42.7339, 25.4858], 6);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap'
             }).addTo(map);
@@ -68,18 +69,12 @@
                             }
                         });
 
-                        const firstValid = data.find(office =>
-                            isValidCoord(parseFloat(office.latitude)) && isValidCoord(parseFloat(office.longitude))
-                        );
-                        if (firstValid) {
-                            map.setView([parseFloat(firstValid.latitude), parseFloat(firstValid.longitude)], 13);
-                        }
+                        map.setView([42.7339, 25.4858], 9);
                     });
             }
 
             loadOffices();
 
-            // Show/hide map based on delivery method
             function updateMapVisibility() {
                 const selected = document.querySelector('input[name="delivery_method"]:checked');
                 if (selected && selected.value === "econt") {
@@ -99,7 +94,6 @@
                 radio.addEventListener("change", updateMapVisibility);
             });
 
-            // Initial state
             updateMapVisibility();
         });
     </script>

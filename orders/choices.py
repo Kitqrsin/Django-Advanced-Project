@@ -10,5 +10,4 @@ class StatusChoices(models.TextChoices):
 
 class DeliveryChoices(models.TextChoices):
     ECONT = 'econt', 'Econt'
-    SAMEDAY_EASYBOX = 'sameday_easybox', 'Sameday Easybox',
     SAMEDAY_ADDRESS = 'sameday_address', 'Sameday to address'
